@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "declaration": true,
+    "moduleResolution": "NodeNext",
+    "emitDeclarationOnly": true,
+    "outDir": "./types",
+    "noEmit": false,
+    "strict": true
+  },
+  "include": ["index.ts"],
+  "exclude": ["node_modules", "test"]
+}
