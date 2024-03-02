@@ -1,6 +1,6 @@
 {
   "name": "rootdata",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A package to use node-fetch to access the Rootdata API",
   "type": "module",
   "main": "dist/index.js",
