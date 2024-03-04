@@ -7,11 +7,18 @@ import type {
 } from "./types.js";
 import { projectQueryURL, searchURL } from "./types.js";
 
-export const search = async (keywords: string): Promise<SearchData[]> => {
+const getApiKey = (): string => {
   const apikey = process.env.ROOTDATA_API_KEY;
   if (!apikey) {
     throw new Error("ROOTDATA_API_KEY is not set in .env");
   }
+  return apikey;
+};
+
+export const search = async (
+  keywords: string,
+  apikey: string = getApiKey()
+): Promise<SearchData[]> => {
   const response = await fetch(searchURL, {
     method: "POST",
     headers: {
@@ -30,12 +37,9 @@ export const search = async (keywords: string): Promise<SearchData[]> => {
 };
 
 export const projectQuery = async (
-  request: ProjectQueryRequest
+  request: ProjectQueryRequest,
+  apikey: string = getApiKey()
 ): Promise<ProjectData | undefined> => {
-  const apikey = process.env.ROOTDATA_API_KEY;
-  if (!apikey) {
-    throw new Error("ROOTDATA_API_KEY is not set in .env");
-  }
   const response = await fetch(projectQueryURL, {
     method: "POST",
     headers: {

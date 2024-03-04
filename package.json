@@ -1,6 +1,6 @@
 {
   "name": "rootdata",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A package to use node-fetch to access the Rootdata API",
   "type": "module",
   "main": "dist/index.js",
@@ -24,9 +24,6 @@
   ],
   "author": "script-money",
   "license": "MIT",
-  "dependencies": {
-    "@types/node": "^20.11.24"
-  },
   "devDependencies": {
     "bun-types": "^1.0.29"
   }
