@@ -1,6 +1,6 @@
 {
   "name": "rootdata",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A package to use node-fetch to access the Rootdata API",
   "type": "module",
   "main": "dist/index.js",
@@ -17,7 +17,7 @@
   "homepage": "https://github.com/script-money/rootdata#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/script-money/rootdata.git"
+    "url": "https://github.com/script-money/rootdata"
   },
   "keywords": [
     "web3"
